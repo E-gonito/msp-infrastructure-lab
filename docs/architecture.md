@@ -16,3 +16,12 @@ The lab utilizes a **Dual-Bridge Architecture** to ensure complete isolation fro
 - **LAN IP:** `10.0.0.1/24`
 - **DHCP Pool:** `10.0.0.10 - 10.0.0.100`
 - **Routing:** All `10.0.0.0/24` traffic must traverse pfSense to reach `vmbr0`.
+
+## Network Segmentation Logic
+The environment uses a **Segmented Gateway** model.
+
+* **WAN Bridge (vmbr0):** Connects to the physical Linksys network. 
+* **LAN Bridge (vmbr1):** Isolated virtual switch with no physical NIC.
+* **Firewall (pfSense):** - WAN IP: 192.168.1.20 (Static via Linksys DHCP Reservation)
+    - LAN IP: 10.0.0.1/24 (Lab Default Gateway)
+    - **Note:** RFC1918 blocking disabled on WAN to allow management via 192.168.1.0/24.
