@@ -29,7 +29,7 @@
 			<groupname>admins</groupname>
 			<uid>0</uid>
 			<priv>user-shell-access</priv>
-			<bcrypt-hash>$2y$10$vZcNIILNL7i5b/rC2mxk2e8dKFjJE0OhpCXFF0E1hT3GB3M5mePL6</bcrypt-hash>
+			<bcrypt-hash>HASHEDPASS</bcrypt-hash>
 		</user>
 		<nextuid>2000</nextuid>
 		<nextgid>2000</nextgid>
